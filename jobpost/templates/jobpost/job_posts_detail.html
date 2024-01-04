@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>{{ details.company }} Details</h1>
+        <p><h1 style="font-size: medium;color: blue;">Title:-</h1>{{ details.title }}</p>
+        <p><h1 style="font-size: medium;color: blue;">Description:-</h1>{{ details.description }}</p>
+        <p><h1 style="font-size: medium;color: blue;">Company:-</h1>{{ details.company }}</p>
+        <p><h1 style="font-size: medium;color: blue;">Posted_on:-</h1>{{ deatails.posted_on }}</p>
+        <p><h1 style="font-size: medium;color: blue;">Experience:-</h1>{{ details.experience }}</p>
+        <p><h1 style="font-size: medium;color: blue;">Location:-</h1>{{ details.location }}</p>
+        <p><h1 style="font-size: medium;color: blue;">Salary:-</h1>{{ details.salary }}</p>
+        <p><h1 style="font-size: medium;color: blue;">Type:-</h1>{{ details.type }}</p>
+        <p><h1 style="font-size: medium;color: blue;">R&R:-</h1>{{ details.roles_and_responsibilities }}</p><br>
+        <a href="{% url 'submit' %}"><input type="button" value="Apply" style="color: green;"></a>&nbsp;
+        <a href="{% url 'jobpost' %}"><input type="button" value="Back" style="color: red;"></a>
+    </div>
+</div>
+
+{% endblock %}
